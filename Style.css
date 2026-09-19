@@ -1,0 +1,888 @@
+/* =========================
+   CONFIGURAÇÕES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --azul: #a9d8ed;
+    --azul-escuro: #3d7188;
+    --azul-claro: #edf8fc;
+
+    --amarelo: #f7e6a6;
+    --amarelo-claro: #fff9df;
+
+    --creme: #fffdf7;
+    --branco: #ffffff;
+
+    --texto: #26373e;
+    --cinza: #718087;
+
+    --borda: rgba(61, 113, 136, 0.15);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: var(--creme);
+
+    color: var(--texto);
+
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(255, 253, 247, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--borda);
+}
+
+
+.header {
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+
+    font-weight: bold;
+
+    color: var(--azul-escuro);
+
+    letter-spacing: 2px;
+}
+
+
+.logo span {
+
+    font-size: 21px;
+
+}
+
+
+.logo small {
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+    margin-top: 5px;
+}
+
+
+.menu {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.menu a {
+
+    color: var(--cinza);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.menu a:hover {
+
+    color: var(--azul-escuro);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 650px;
+
+    padding: 90px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 20%,
+            var(--amarelo),
+            transparent 25%
+        ),
+
+        var(--azul-claro);
+}
+
+
+.hero-text {
+
+    max-width: 650px;
+}
+
+
+.mini-title {
+
+    color: var(--azul-escuro);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.hero h1 span,
+.section-title h2 span,
+.about-text h2 span,
+.contact-title h2 span {
+
+    color: var(--azul-escuro);
+
+}
+
+
+.hero-description {
+
+    max-width: 500px;
+
+    margin: 30px 0;
+
+    color: var(--cinza);
+
+    font-size: 17px;
+}
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    border-radius: 50px;
+
+    background: var(--azul-escuro);
+
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.hero-image {
+
+    min-height: 450px;
+
+    border-radius: 40px;
+
+    background: var(--amarelo);
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.decor-circle {
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: var(--azul);
+
+    top: 50px;
+
+    right: 40px;
+}
+
+
+.hero-placeholder {
+
+    width: 230px;
+
+    height: 230px;
+
+    border-radius: 50%;
+
+    background: var(--branco);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 120px;
+
+    color: var(--azul-escuro);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.section-title {
+
+    max-width: 700px;
+
+    margin-bottom: 45px;
+}
+
+
+.section-title h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+}
+
+
+.section-title > p:last-child {
+
+    color: var(--cinza);
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categories {
+
+    padding: 110px 7%;
+}
+
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.category-card {
+
+    min-height: 300px;
+
+    padding: 28px;
+
+    border-radius: 25px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.25s;
+}
+
+
+.category-card:nth-child(even) {
+
+    background: var(--amarelo-claro);
+
+}
+
+
+.category-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(61, 113, 136, 0.12);
+
+}
+
+
+.category-number {
+
+    color: var(--cinza);
+
+    font-size: 12px;
+
+}
+
+
+.category-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    background: var(--azul);
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.category-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+}
+
+
+.category-card p {
+
+    color: var(--cinza);
+
+    font-size: 14px;
+
+}
+
+
+.category-card a {
+
+    color: var(--azul-escuro);
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================
+   AMBIENTES
+========================= */
+
+.environment-section {
+
+    padding: 110px 7%;
+
+    background: var(--azul-claro);
+}
+
+
+.environment-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.environment-card {
+
+    min-height: 300px;
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--branco);
+
+    transition: 0.25s;
+}
+
+
+.environment-card:nth-child(2),
+.environment-card:nth-child(3) {
+
+    background: var(--amarelo);
+
+}
+
+
+.environment-card:hover {
+
+    transform: scale(1.015);
+
+}
+
+
+.environment-card > span:first-child {
+
+    color: var(--cinza);
+
+    font-size: 12px;
+}
+
+
+.environment-card div {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 30px;
+}
+
+
+.environment-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+}
+
+
+.environment-card p {
+
+    color: var(--cinza);
+
+}
+
+
+.environment-card strong {
+
+    position: absolute;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    font-size: 25px;
+
+    color: var(--azul-escuro);
+}
+
+
+/* =========================
+   SEÇÕES SIMPLES
+========================= */
+
+.simple-section {
+
+    padding: 110px 7%;
+
+}
+
+
+.modulados-section {
+
+    padding: 110px 7%;
+
+    background: var(--amarelo-claro);
+}
+
+
+.modulados-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.modulados-grid a {
+
+    min-height: 250px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    transition: 0.2s;
+}
+
+
+.modulados-grid a:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.modulados-grid span {
+
+    color: var(--cinza);
+
+    font-size: 12px;
+}
+
+
+.modulados-grid h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 35px;
+
+    margin-top: 80px;
+}
+
+
+.modulados-grid p {
+
+    color: var(--azul-escuro);
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.about {
+
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    background: var(--azul);
+}
+
+
+.about-image {
+
+    min-height: 450px;
+
+    border-radius: 35px;
+
+    background: var(--amarelo);
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    color: var(--azul-escuro);
+}
+
+
+.about-text h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+}
+
+
+.about-text p {
+
+    margin-top: 20px;
+
+    color: #426371;
+
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contact {
+
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 80px;
+
+    background: var(--amarelo-claro);
+}
+
+
+.contact-title h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+}
+
+
+.contact-links {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.contact-links a {
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--borda);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-weight: bold;
+
+}
+
+
+.contact-links a:hover {
+
+    color: var(--azul-escuro);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 30px 7%;
+
+    background: var(--azul-escuro);
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+footer .logo {
+
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .category-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .about,
+    .contact {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .menu {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        padding: 70px 6%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .category-grid,
+    .environment-grid,
+    .modulados-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .categories,
+    .environment-section,
+    .simple-section,
+    .modulados-section,
+    .about,
+    .contact {
+
+        padding: 75px 6%;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+    }
+
+}
